@@ -3,14 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon"
+    "start": "nodemon app.js"
   },
   "author": "jakub41 <lemiszewski@gmx.com>",
   "license": "MIT",
   "dependencies": {
-    "koa": "^2.8.1"
+    "koa": "^2.8.1",
+    "koa-json": "^2.0.2",
+    "koa-router": "^7.4.0"
   },
   "devDependencies": {
+    "jshint": "^2.10.2",
     "nodemon": "^1.19.1"
   }
 }
