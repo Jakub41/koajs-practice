@@ -37,6 +37,7 @@ router.get('/', index);
 router.get('/add', showAdd);
 router.post('/add', add);
 router.get('/test', ctx => (ctx.body = `Hello ${ctx.user}`));
+router.get('/test2/:name', ctx => (ctx.body = `Hello ${ctx.params.name}`));
 
 // List Of Stuff
 async function index(ctx) {
