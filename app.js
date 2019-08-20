@@ -17,6 +17,9 @@ app.use(json());
 // BodyParser Middleware
 app.use(bodyParser());
 
+// Add Additional Properties To CTX
+app.context.user = 'Jake';
+
 // Simple Middleware Example
 //app.use(async ctx => ctx.body = { msg:'Hello World' });
 
@@ -33,7 +36,7 @@ render(app, {
 router.get('/', index);
 router.get('/add', showAdd);
 router.post('/add', add);
-router.get('/test', ctx => (ctx.body = 'hello test'));
+router.get('/test', ctx => (ctx.body = `Hello ${ctx.user}`));
 
 // List Of Stuff
 async function index(ctx) {
