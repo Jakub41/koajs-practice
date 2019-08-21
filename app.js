@@ -56,7 +56,7 @@ async function showAdd(ctx) {
 async function add(ctx) {
     const body = ctx.request.body;
     stuff.push(body.stuff);
-    ctx.redirect("/"); 
+    ctx.redirect("/");
 }
 
 // Router Middleware
